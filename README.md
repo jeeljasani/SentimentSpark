@@ -45,10 +45,35 @@ The goal of NewsSense is to extract, clean, and analyze textual data from Reuter
 
 ### 2. Reuters File Parsing
 
-# Java app using JSoup
 java -jar NewsSenseParser.jar
 
 ### 3. Run Spark Word Count
 
 spark-submit --class WordFrequencyAnalyzer --master local NewsSenseSpark.jar
+
+### 4. Run Sentiment Analysis
+
+spark-submit --class SentimentAnalyzer --master local NewsSenseSpark.jar
+
+## 📊 Sample Output
+
+| Title                        | Match  | Score | Polarity |
+|------------------------------|--------|-------|----------|
+| Dollar gains against Yen     | gain   | +1    | Positive |
+| Stock slump continues        | slump  | -1    | Negative |
+| Market remains unchanged     | –      | 0     | Neutral  |
+
+## 🧠 Challenges & Solutions
+
+- **API & File Handling**  
+  File parsing with JSoup required customized XML processing
+
+- **Stop Word Filtering**  
+  Ensured compatibility with multiple formats and encodings
+
+- **Cluster Setup**  
+  Used GCP VMs and Spark local mode for scalable processing
+
+- **Sentiment Scoring**  
+  Created lightweight, explainable BoW model
 
