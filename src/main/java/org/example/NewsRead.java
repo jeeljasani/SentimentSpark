@@ -11,9 +11,9 @@ import java.io.File;
 import java.io.IOException;
 
 public class NewsRead {
-    private static final String MONGODB_URI = "mongodb+srv://jasanijeel2772:root@assignment2.mskxx.mongodb.net/";
-    private static final String DATABASE_NAME = "RawDb";
-    private static final String COLLECTION_NAME = "news";
+    private static final String MONGODB_URI = "";
+    private static final String DATABASE_NAME = "";
+    private static final String COLLECTION_NAME = "";
 
     public static void main(String[] args) {
         try {
