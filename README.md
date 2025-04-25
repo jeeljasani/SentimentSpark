@@ -48,3 +48,6 @@ The goal of NewsSense is to extract, clean, and analyze textual data from Reuter
 # Java app using JSoup
 java -jar NewsSenseParser.jar
 
+### 3. Run Spark Word Count
+```bash
+spark-submit --class WordFrequencyAnalyzer --master local NewsSenseSpark.jar
