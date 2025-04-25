@@ -44,10 +44,11 @@ The goal of NewsSense is to extract, clean, and analyze textual data from Reuter
 - Create a database named `RawDb` and a collection named `news`
 
 ### 2. Reuters File Parsing
-```bash
+
 # Java app using JSoup
 java -jar NewsSenseParser.jar
 
 ### 3. Run Spark Word Count
-```bash
+
 spark-submit --class WordFrequencyAnalyzer --master local NewsSenseSpark.jar
+
